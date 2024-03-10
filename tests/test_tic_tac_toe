@@ -1,0 +1,15 @@
+import unittest
+from tic_tac_toe.game import Board
+from tic_tac_toe.game import check_tie
+class Testtictactoe(unittest.TestCase):
+    def test_game_check_tie(self):
+        board = Board
+        
+        board.cells = [['X', 'O', 'X'],
+                       ['O', 'X', 'O'],
+                       ['O', 'X', 'O']]
+        
+        self.assertTrue(check_tie(board.cells))
+
+if __name__ == '__init__':
+    unittest.main()

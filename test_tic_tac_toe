@@ -1,0 +1,12 @@
+import unittest
+import game
+import board
+
+class Testtictactoe(unittest.TestCase):
+    def test_game_check_tie(self):
+        board = Board()
+        board.cells = [['X', 'O', 'X'],
+                       ['O', 'X', 'O'],
+                       ['O', 'X', 'O']]
+        
+        self.assertTrue(check_tie(board.cells))
